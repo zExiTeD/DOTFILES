@@ -1,0 +1,43 @@
+{
+	"layer": "top",
+	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
+	"modules-center": ["cpu","memory","pulseaudio","pulseaudio/slider"],
+	"modules-right": ["clock","network"],
+	"hyprland/window": {
+		"max-length": 2000,
+		"separate-outputs": true
+	},
+	"pulseaudio":{
+		"format":"  {volume}%"
+	},
+	"pulseaudio/slider":{
+		"min": 0,
+		"max": 100,
+		"orientation": "horizontal"
+	},
+	"cpu": {
+		"format":"   {usage}%"
+	},
+	"memory": {
+		"format":"    {percentage}%"
+	},
+	"network": {
+		"format":" ",
+		"format-alt": "    {essid}  [ 󰩟  {ipaddr}]   [ {signalStrength}  % ]   󰕒  {bandwidthUpBits} 󰇚  {bandwidthDownBits}"
+
+	},
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"on-click": "activate"
+	},
+	"battery": {
+		"format": "{capacity}% {icon}",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"clock": {
+		"format-alt": "{:%a, %d. %b  %H:%M}"
+	}
+}
